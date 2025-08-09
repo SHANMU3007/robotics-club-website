@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../components/common/Header';
+import Header from '../components/common/Navbar';
 import Footer from '../components/common/Footer';
 import Hero from '../components/home/Hero'
 import MissionVision from '../components/home/MissionVision';

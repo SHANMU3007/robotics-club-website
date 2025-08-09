@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../components/common/Header';
+import Header from '../components/common/Navbar';
 import Footer from '../components/common/Footer';
 import AboutUs from '../components/about/AboutUs';
 import Goals from '../components/about/Goals';

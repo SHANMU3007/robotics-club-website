@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../components/common/Header';
+import Header from '../components/common/Navbar';
 import Footer from '../components/common/Footer';
 import UpcomingEvents from '../components/event/UpcomingEvents';
 import PastEvents from '../components/event/PastEvents';
