@@ -36,13 +36,6 @@ const Header = () => {
     <header style={headerStyle}>
       <div className={container}>
         <h1 style={h1Style}>Robotics Club</h1>
-        <nav>
-          <ul style={navStyle}>
-            <li><a href="/" style={linkStyle}>Home</a></li>
-            <li><a href="/about" style={linkStyle}>About</a></li>
-            <li><a href="/members" style={linkStyle}>Members</a></li>
-          </ul>
-        </nav>
       </div>
     </header>
   );
