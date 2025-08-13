@@ -1,0 +1,369 @@
+.members-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  line-height: 1.6;
+}
+
+/* Header Section */
+.members-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.members-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem 0;
+  background: rgb(0, 229, 255);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.02em;
+}
+
+.members-subtitle {
+  font-size: 1.2rem;
+  color: #6b7280;
+  margin: 0 0 2rem 0;
+  font-weight: 400;
+}
+
+
+
+/* Filter Tabs */
+.filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.filter-tab {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 25px;
+  background: #ffffff;
+  color: #6b7280;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.filter-tab:hover {
+  border-color: rgb(0, 229, 255);
+  color: rgb(0, 229, 255);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.15);
+}
+
+.filter-tab.active {
+  background: rgb(0, 229, 255);
+  border-color: rgb(0, 229, 255);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* Stats Container */
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  background: #ffffff;
+  padding: 1.5rem 2rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f3f4f6;
+  min-width: 120px;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  background: rgb(0, 229, 255);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Role Section */
+.role-section {
+  margin-bottom: 3rem;
+}
+
+.role-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+.role-icon {
+  color: rgb(0, 229, 255);
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+}
+
+.role-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: rgb(0, 229, 255);
+  flex-grow: 1;
+}
+
+.role-count {
+  background: rgb(0, 229, 255);
+  color: #ffffff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Members Grid */
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  align-items: start;
+}
+
+/* Member Card */
+.member-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f3f4f6;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.member-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: rgb(0, 229, 255);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.member-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Member Photo */
+.member-photo-container {
+  margin-bottom: 1.5rem;
+}
+
+.member-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #f3f4f6;
+  transition: all 0.3s ease;
+}
+
+.member-card:hover .member-photo {
+  border-color: rgb(0, 229, 255);
+  transform: scale(1.05);
+}
+
+/* Member Info */
+.member-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: #374151;
+}
+
+.member-role {
+  font-size: 1rem;
+  color: #6b7280;
+  margin: 0 0 1.5rem 0;
+  font-weight: 500;
+}
+
+/* Contact Buttons */
+
+
+.no-results-icon {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1.5rem auto;
+  color: #d1d5db;
+}
+
+.no-results-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: #374151;
+}
+
+.no-results-text {
+  font-size: 1rem;
+  margin: 0;
+  color: #6b7280;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .members-container {
+    padding: 1rem;
+  }
+  
+  .members-title {
+    font-size: 2.5rem;
+  }
+  
+  .members-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .search-input {
+    padding: 0.875rem 2.5rem 0.875rem 0.875rem;
+  }
+  
+  .search-icon {
+    right: 0.875rem;
+  }
+  
+  .stats-container {
+    gap: 1rem;
+  }
+  
+  .stat-card {
+    padding: 1.25rem 1.5rem;
+    min-width: 100px;
+  }
+  
+  .stat-number {
+    font-size: 1.75rem;
+  }
+  
+  .members-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  
+  .member-card {
+    padding: 1.5rem;
+  }
+  
+  .member-photo {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .role-header {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .filter-tabs {
+    gap: 0.25rem;
+  }
+  
+  .filter-tab {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .members-title {
+    font-size: 2rem;
+  }
+  
+  .members-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stats-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .filter-tabs {
+    justify-content: center;
+  }
+}
+
+/* Animation Classes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.member-card {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Focus and Accessibility */
+.search-input:focus,
+.filter-tab:focus,
+.contact-button:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  .search-filter-container,
+  .member-contact {
+    display: none;
+  }
+  
+  .member-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #e5e7eb;
+  }
+}

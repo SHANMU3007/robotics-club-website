@@ -79,26 +79,9 @@ const Header = () => {
         
         <nav>
           <ul style={navStyle}>
-            <li>
-              <a href="/" style={linkStyle}>
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="/about" style={linkStyle}>
-                About
-              </a>
-            </li>
-            <li>
-              <a href="/events" style={linkStyle}>
-                Events
-              </a>
-            </li>
-            <li>
-              <a href="/contact" style={linkStyle}>
-                Contact
-              </a>
-            </li>
+            <li><a href="/" style={linkStyle}>Home</a></li>
+            <li><a href="/about" style={linkStyle}>About</a></li>
+            <li><a href="/members" style={linkStyle}>Members</a></li>
           </ul>
         </nav>
       </div>

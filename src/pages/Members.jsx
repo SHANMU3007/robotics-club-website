@@ -1,12 +1,9 @@
 import React from 'react';
-import Header from '../components/common/Navbar';
 import Footer from '../components/common/Footer';
-import UpcomingEvents from '../components/event/UpcomingEvents';
-import PastEvents from '../components/event/PastEvents';
+import MemberList from '../components/members/MemberList';
+import Header1 from '../components/common/Navbar1';
 
-// This is the Events page component. It assembles the Header,
-// Footer, and the dedicated event components to form a complete page.
-function Events() {
+function Members() {
   const pageWrapperStyle = {
     display: 'flex',
     flexDirection: 'column',
@@ -23,14 +20,13 @@ function Events() {
     margin: '0 auto',
     padding: '0 1rem'
   };
-  
+
   return (
     <div style={pageWrapperStyle}>
-      <Header />
+      <Header1/>
       <main style={mainContentStyle}>
         <div style={containerStyle}>
-          <UpcomingEvents />
-          <PastEvents />
+          <MemberList />
         </div>
       </main>
       <Footer />
@@ -38,4 +34,4 @@ function Events() {
   );
 }
 
-export default Events;
+export default Members;
