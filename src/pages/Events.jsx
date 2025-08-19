@@ -1,12 +1,11 @@
 import React from 'react';
 import Header from '../components/common/Navbar';
 import Footer from '../components/common/Footer';
-import Hero from '../components/home/Hero';
-import MissionVision from '../components/home/MissionVision';
-import Testimonials from '../components/home/Testimonials';
-import NewsAnnouncements from '../components/home/NewsAnnouncements';
+import EventsHero from '../components/events/EventsHero';
+import UpcomingEvents from '../components/events/UpcomingEvents';
+import EventCategories from '../components/events/EventCategories';
 
-function Home() {
+function Events() {
   const pageWrapperStyle = {
     display: 'flex',
     flexDirection: 'column',
@@ -35,10 +34,9 @@ function Home() {
       <Header />
       <main style={mainContentStyle}>
         <div style={containerStyle}>
-          <Hero />
-          <MissionVision />
-          <NewsAnnouncements />
-          <Testimonials />
+          <EventsHero />
+          <EventCategories />
+          <UpcomingEvents />
         </div>
       </main>
       <Footer />
@@ -46,4 +44,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Events;

@@ -1,12 +1,15 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
+  const location = useLocation();
+
   const headerStyle = {
-    backgroundColor: '#0a0a0a',
+    backgroundColor: '#121212',
     color: 'white',
     padding: '1.2rem 0',
-    borderBottom: '1px solid #1e3a8a',
-    boxShadow: '0 2px 15px rgba(0, 100, 255, 0.1)',
+    borderBottom: '1px solid #4A90E2',
+    boxShadow: '0 2px 15px rgba(74, 144, 226, 0.1)',
     position: 'sticky',
     top: 0,
     zIndex: 100,
@@ -30,7 +33,7 @@ const Header = () => {
 
   const logoTextStyle = {
     margin: 0,
-    color: '#4dabf7',
+    color: '#4A90E2',
     fontSize: '1.8rem',
     fontWeight: 'bold',
     letterSpacing: '1px',
@@ -38,34 +41,41 @@ const Header = () => {
 
   const navStyle = {
     display: 'flex',
-    gap: '2rem',
+    gap: '1.5rem',
     listStyleType: 'none',
     margin: 0,
     padding: 0,
+    flexWrap: 'wrap',
   };
 
   const linkStyle = {
-    color: '#4dabf7',
+    color: '#E0E0E0',
     textDecoration: 'none',
     padding: '0.5rem 0',
-    fontSize: '1.1rem',
+    fontSize: '1rem',
     fontWeight: '500',
     borderBottom: '2px solid transparent',
+    transition: 'all 0.2s ease',
   };
 
   const activeLinkStyle = {
     ...linkStyle,
-    borderBottom: '2px solid #1971c2',
+    borderBottom: '2px solid #61DAFB',
+    color: '#61DAFB',
+  };
+
+  const isActive = (path) => {
+    return location.pathname === path;
   };
 
   return (
     <header style={headerStyle}>
       <div style={containerStyle}>
-        <a href="/" style={logoStyle}>
+        <Link to="/" style={logoStyle}>
           <div style={{
             width: '40px',
             height: '40px',
-            backgroundColor: '#1971c2',
+            backgroundColor: '#4A90E2',
             borderRadius: '50%',
             display: 'flex',
             alignItems: 'center',
@@ -75,13 +85,16 @@ const Header = () => {
             fontSize: '1.2rem'
           }}>RC</div>
           <h1 style={logoTextStyle}>Robotics Club</h1>
-        </a>
+        </Link>
         
         <nav>
           <ul style={navStyle}>
-            <li><a href="/" style={linkStyle}>Home</a></li>
-            <li><a href="/about" style={linkStyle}>About</a></li>
-            <li><a href="/members" style={linkStyle}>Members</a></li>
+            <li><Link to="/" style={isActive('/') ? activeLinkStyle : linkStyle}>Home</Link></li>
+            <li><Link to="/events" style={isActive('/events') ? activeLinkStyle : linkStyle}>Events</Link></li>
+            <li><Link to="/team" style={isActive('/team') ? activeLinkStyle : linkStyle}>Team</Link></li>
+            <li><Link to="/gallery" style={isActive('/gallery') ? activeLinkStyle : linkStyle}>Gallery</Link></li>
+            <li><Link to="/achievements" style={isActive('/achievements') ? activeLinkStyle : linkStyle}>Achievements</Link></li>
+            <li><Link to="/contact" style={isActive('/contact') ? activeLinkStyle : linkStyle}>Contact & Join</Link></li>
           </ul>
         </nav>
       </div>

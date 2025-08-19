@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -29,14 +30,14 @@ const Footer = () => {
           font-size: 1.25rem;
           font-weight: 700;
           margin-bottom: 1rem;
-          color: #f97316;
+          color: #4dabf7;
         }
 
         .footer-section h4 {
           font-size: 1.1rem;
           font-weight: 600;
           margin-bottom: 1rem;
-          color: #f97316;
+          color: #4dabf7;
         }
 
         .footer-section p {
@@ -65,13 +66,41 @@ const Footer = () => {
           transition: color 0.3s ease;
         }
 
-        .footer-links li:hover {
-          color: #f97316;
+        .footer-links li a {
+          color: #9ca3af;
+          text-decoration: none;
+          transition: color 0.3s ease;
         }
 
-        .footer-links .emergency {
-          color: #f97316;
-          font-weight: 600;
+        .footer-links li a:hover {
+          color: #4dabf7;
+        }
+
+        .footer-links li:hover {
+          color: #4dabf7;
+        }
+
+        .social-links {
+          display: flex;
+          gap: 1rem;
+          margin-top: 1rem;
+        }
+
+        .social-link {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 40px;
+          height: 40px;
+          background-color: #374151;
+          color: white;
+          border-radius: 50%;
+          text-decoration: none;
+          transition: background-color 0.3s ease;
+        }
+
+        .social-link:hover {
+          background-color: #4dabf7;
         }
 
         .footer-bottom {
@@ -109,44 +138,47 @@ const Footer = () => {
           <div className="footer-section">
             <h3>Robotics Club</h3>
             <p>An innovative club where technology enthusiasts collaborate to design, build, and program robots for learning, research, and competitions.</p>
-            <div className="contact-info">
-              <span></span>
+            <div className="social-links">
+              <a href="#" className="social-link">📘</a>
+              <a href="#" className="social-link">🐦</a>
+              <a href="#" className="social-link">📷</a>
+              <a href="#" className="social-link">💼</a>
             </div>
           </div>
 
           <div className="footer-section">
-            <h4>Faculty Coordinators</h4>
+            <h4>Quick Links</h4>
             <ul className="footer-links">
-              <li>Emergency Repairs</li>
-              <li>Drain Cleaning</li>
-              <li>Water Heaters</li>
-              <li>Pipe Repair</li>
+              <li><Link to="/gallery">Photo Gallery</Link></li>
+              <li><Link to="/achievements">Achievements</Link></li>
+              <li><Link to="/team">Our Team</Link></li>
+              <li><Link to="/members">Members</Link></li>
             </ul>
           </div>
 
           <div className="footer-section">
-            <h4>Secretry</h4>
+            <h4>Get Involved</h4>
             <ul className="footer-links">
-              <li>Downtown Area</li>
-              <li>Suburbs</li>
-              <li>Industrial District</li>
-              <li>Surrounding Counties</li>
+              <li><Link to="/join">Join Our Club</Link></li>
+              <li><Link to="/events">Events</Link></li>
+              <li><Link to="/contact">Contact Us</Link></li>
+              <li><Link to="/gallery">View Activities</Link></li>
             </ul>
           </div>
 
           <div className="footer-section">
-            <h4>Contact Us</h4>
+            <h4>Contact Info</h4>
             <ul className="footer-links">
-              <li>Mon-Fri: 7AM - 8PM</li>
-              <li>Saturday: 8AM - 6PM</li>
-              <li>Sunday: 9AM - 5PM</li>
-              <li className="emergency">24/7 Emergency Service</li>
+              <li>📍 Engineering Building, Room 205</li>
+              <li>📧 robotics.club@university.edu</li>
+              <li>📱 (555) 123-4567</li>
+              <li>🕒 Mon-Fri: 9AM - 6PM</li>
             </ul>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p>© 2025 RBC. All rights reserved. Licensed & Insured.</p>
+          <p>© 2025 Robotics Club. All rights reserved.</p>
           <p className="design">
             Designed and Maintained By Saravana M || Shanmuga Patel Kani C
           </p>
